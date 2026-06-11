@@ -1,0 +1,9 @@
+# 분석 파이프라인 (src/analyze.py, src/build_site.py)
+pandas>=2.2
+numpy>=1.26
+statsmodels>=0.14
+scikit-learn>=1.5
+plotly>=5.24
+
+# 데이터 자동 수집 (src/download_trends.py, 선택)
+pytrends>=4.9

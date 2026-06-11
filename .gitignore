@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# 환경
+.venv/
+.DS_Store
+# 가공 데이터(원본 raw는 커밋, processed는 재생성 가능하므로 제외 가능)
+# data/processed/
+# 내부 기획·가이드 문서(깃헙 비공개)
+planning/
