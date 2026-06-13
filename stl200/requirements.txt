@@ -1,0 +1,15 @@
+# 분석 파이프라인
+pandas>=2.2
+numpy>=1.26
+statsmodels>=0.14
+scikit-learn>=1.5
+plotly>=5.24
+
+# 데이터 자동 수집
+pytrends>=4.9
+
+# 실시간 웹앱
+streamlit>=1.36
+joblib>=1.3
+
+# 참고: 군집 모델 비교(compare_models.py)는 scikit-learn 내장 HDBSCAN 사용 → 별도 패키지 불필요
