@@ -23,6 +23,8 @@ COMP = PROC / "components"
 DOCS = ROOT.parent / "docs"
 
 FONT_FAMILY = "Pretendard, -apple-system, BlinkMacSystemFont, sans-serif"
+# 실시간 분류기(Streamlit Cloud) 임베드 URL
+STREAMLIT_URL = "https://gqfhgm689dykskx6puypjk.streamlit.app"
 COLOR = {"메가": "#2563eb", "마이크로": "#dc2626", "스테디": "#16a34a"}
 STAGE_BADGE = {
     "도입": "#64748b", "성장": "#16a34a",
@@ -374,6 +376,11 @@ window.addEventListener('load', function(){{
  각 아이템의 <b>수명주기 단계</b>와 결합해 <b>실무 전략</b>을 도출했습니다.
  <br><span class="note">※ 검색 관심도는 구글 트렌드의 검색량(정규화 상대값)입니다.</span>
 </div>
+
+<h2>🔍 실시간 분류기</h2>
+<p class="note">아무 패션 키워드나 입력하면 구글 트렌드 데이터를 즉석 분석해 분류·수명주기 단계를 알려줍니다. (아래 156개 분석과 동일한 모델을 사용)</p>
+<iframe src="{STREAMLIT_URL}/?embed=true" width="100%" height="860"
+        style="border:1px solid #e2e8f0;border-radius:12px" loading="lazy"></iframe>
 
 <h2>① 군집화 결과</h2>
 <p class="note">STL 분해 성분과 원본 검색량에서 산출한 7개 지표(트렌드강도·계절성·기울기·지속기간·잔차변동·첨예도·피크시점)를 바탕으로 머신러닝(K-means 군집화)을 적용해 아이템을 메가·마이크로·스테디 {n_clusters}개 군집으로 분류했습니다. 아래 그림은 이 지표를 PCA로 2D에 나타낸 것으로, 색은 군집이며 가까이 모인 점일수록 성격이 비슷합니다.</p>
