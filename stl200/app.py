@@ -85,9 +85,6 @@ def stl_chart(comp: pd.DataFrame) -> go.Figure:
 
 # ---------------------------------------------------------------------------
 st.set_page_config(page_title="패션 트렌드 실시간 분류기", page_icon="👗")
-st.title("👗 패션 트렌드 실시간 분류기")
-st.caption("키워드를 입력하면 구글 트렌드 데이터를 즉석 분석해 "
-           "**메가 · 마이크로 · 스테디** 분류와 **수명주기 단계**를 알려줍니다.")
 
 model = load_model()
 keyword = st.text_input("패션 아이템 키워드", placeholder="예: 버킷햇, 카고팬츠, 발레코어 …")
@@ -135,7 +132,3 @@ if st.button("분석하기", type="primary") and keyword.strip():
 
     st.subheader("STL 분해")
     st.plotly_chart(stl_chart(comp), use_container_width=True)
-
-st.divider()
-st.caption("※ 검색 관심도는 구글 트렌드의 검색량(정규화 상대값)입니다. · "
-           "200개 학습 모델 기준 분류 · 분석: STL + K-means(k=3)")
